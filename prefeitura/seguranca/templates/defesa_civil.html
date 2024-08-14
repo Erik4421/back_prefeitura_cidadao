@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'seguranca/global.css' %}">
+    <link rel="stylesheet" href="{% static 'seguranca/seguranca.css' %}">
+</head>
+<body>
+    <div class="container">
+        {% include 'header.html' %}
+        <div class="caixa_icone"><div class="icone"></div></div>
+        <h3 class="titulo_categoria">Segurança Publica</h3>
+        <div class="botao_servicos">Serviços</div>
+        <h4 class="titulo_servicos">Serviços disponíveis</h4>
+
+        <div class="container_servicos">
+            <div class="caixa_servico"><a href="/seguranca/palestras-para-instituições-de-ensino" class="servico">COMPDEC Palestras para Instituições de Ensino</a></div>
+            <div class="caixa_servico"><a href="/seguranca/registro-de-ocorrencia-e-desastre" class="servico">COMPDEC Registro de Ocorrência de Desastre</a></div>
+            <div class="caixa_servico"><a href="/seguranca/solicitacao-de-vistorias-preventivas" class="servico">COMPOFC- Solicitação de Vistorias Preventivas</a></div>
+            <div class="caixa_servico"><a href="/seguranca/alagamento" class="servico">Alagamento</a></div>
+            <div class="caixa_servico"><a href="/seguranca/desmoronamento" class="servico">Desmoronamento</a></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'seguranca/global.css' %}">
+    <link rel="stylesheet" href="{% static 'seguranca/seguranca.css' %}">
+</head>
+<body>
+    <div class="container">
+        {% include 'header.html' %}
+        <div class="caixa_icone"><div class="icone"></div></div>
+        <h3 class="titulo_categoria">Guarda Municipal</h3>
+        <div class="botao_servicos">Serviços</div>
+        <h4 class="titulo_servicos">Serviços disponíveis</h4>
+
+        <div class="container_servicos">
+            <div class="caixa_servico"><a href="/seguranca/secretaria-de-seguranca-urbana-cidadania" class="servico">SEMUSB - Secretaria de Segurança Urbana Cidadania</a></div>
+            <div class="caixa_servico"><a href="/seguranca/solicitacao-de-guarnicao-para-evento" class="servico">SEMUSB - Solicitação de Guarnição para Evento</a></div>
+            <div class="caixa_servico"><a href="/seguranca/solicitacao-de-rondas-da-guarda-municipal" class="servico">SEMUSB - Solicitação de Rondas da Guarda Municipal</a></div>
+            <div class="caixa_servico"><a href="/seguranca/ligue-para-nos" class="servico">Ligue Para Nós</a></div>
+            <div class="caixa_servico"><a href="/seguranca/teatro-de-fantoches" class="servico">Teatro de Fantoches</a></div>
+            <div class="caixa_servico"><a href="/seguranca/ouvidoria" class="servico">Ouvidoria</a></div>
+            <div class="caixa_servico"><a href="/seguranca/denuncie-aqui" class="servico">Denuncie aqui</a></div>
+        </div>
+    </div>
+</body>
+</html>

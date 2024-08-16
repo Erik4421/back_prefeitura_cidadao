@@ -15,10 +15,11 @@
         <h3>{% block tipo_de_servico %} {% endblock %}</h3>
         <h6>Informações</h6>
 
-        <form action="">
+        <form action="" method="POST">
+            {% csrf_token %}
             <label for="">Descrição *</label>
-            <textarea name="descricao" id="descricao" required placeholder="Conteúdo"></textarea>
-            <input type="button" value="Solicitar" class="botao">
+            <textarea name="descricao" id="descricao" required placeholder=""></textarea>
+            <input type="submit" value="Solicitar" class="botao">
         </form>
 
         {% block container %} {% endblock%}

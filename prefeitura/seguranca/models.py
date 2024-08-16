@@ -48,21 +48,17 @@ class Solicitacao_De_Rondas_Da_Guarda_Municipal(models.Model):
         return self.descricao
 
 class Teatro_De_Fantoches(models.Model):
-    ACAO_CHOICES = [
-        ("S", "Sim"),
-        ("N", "Não")
-    ]
-
     telefone_do_resposavel = models.TextField(max_length=11)
     email = models.TextField(max_length=300)
     local_da_apresentacao = models.TextField(300)
     cep = models.TextField(max_length=9)
     bairro = models.TextField(max_length=200)
+    rua = models.TextField(max_length=200, default="")
     ponto_de_referencia = models.TextField(max_length=200)
     publico_estimado = models.IntegerField()
     tema_da_apresentacao = models.TextField(max_length=200)
-    possui_microfone = models.TextField(max_length=1, choices=ACAO_CHOICES)
-    possui_caixa_de_som = models.TextField(max_length=1, choices=ACAO_CHOICES)
+    possui_microfone = models.TextField(max_length=3)
+    possui_caixa_de_som = models.TextField(max_length=3)
 
     def __str__(self):
         return self.tema_da_apresentacao
@@ -72,6 +68,6 @@ class Denuncie_aqui(models.Model):
     rua_do_local_da_denuncia = models.TextField(max_length=300)
     ponto_de_referencia_do_local_da_denuncia = models.TextField(max_length=200)
     cep_do_local_da_denuncia = models.TextField(max_length=30)
-
+    observacoes = models.TextField(max_length=1000, default="")
     def __str__(self):
         return self.rua_do_local_da_denuncia

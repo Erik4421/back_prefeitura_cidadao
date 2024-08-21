@@ -1,3 +1,27 @@
-{% extends 'formulario_geral.html' %}
+{% load static %}
 
-{% block tipo_de_servico %} Ligue Para Nós {% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'seguranca/global.css' %}">
+    <link rel="stylesheet" href="{% static 'seguranca/formulario.css' %}">
+</head>
+<body>
+    <div class="container">
+        {% include 'header.html' %}
+        <h3>Ligue Para Nós</h3>
+        <img src="{% static 'img/guardas.jpeg' %}" alt="" width="100%" height="240px">
+
+        <p>Precisa de contato direto? Toque para visualizar nosso endereço ou ligue para nós com um clique. Acessibilidade com um clique</p>
+
+        <h4>Locais</h4>
+        <div class="caixa_locais">
+            <h3 style="margin-top: 8px;">Base da Guarda Civil Metropolitana de...</h3>
+            <div class="locais_info"></div>
+        </div>
+    </div>
+</body>
+</html>
